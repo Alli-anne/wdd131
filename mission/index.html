@@ -6,7 +6,11 @@
     <title>BYUI Mission Statement</title>
     <link rel="stylesheet" href="style.css" >
 </head>
-<body>
+<body class="dark">
+    <select id="themeSelector">
+        <option value="light">Light</option>
+        <option value="dark" selected>Dark</option>
+    </select>
     <div class="contant">
         <header class="title">
            <h1>MISSION STATEMENT</h1> 
@@ -24,8 +28,9 @@
             </ol>
         </main>
         <footer> 
-            <img src="byui-logo_blue.webp" alt="byui logo">
+            <img id="logo" src="byui-logo_white.png" alt="logo">
         </footer>
     </div>
+<script src="mission.js"></script>
 </body>
 </html>
