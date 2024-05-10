@@ -29,17 +29,14 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1000px;
-    
+    max-width: 1000px;  
 }
 header {
     background-color: lightblue;
     color: #fff;
-    max-width: auto;
     margin-left: 0;
     margin-right: 0;
     padding: 20px;
-    border-radius: 0px, 0px, 0px, 0px;
     text-align: center;
     width: 100%;
     max-width: 100%;
