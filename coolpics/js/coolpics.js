@@ -1,35 +1,64 @@
-document.querySelector("#year").textContent = new Date().getFullYear();
+// Function to generate the modal template
+function viewerTemplate(pic, alt) {
+    return `<div class="viewer">
+        <button class="close-viewer">X</button>
+        <img src="${pic}" alt="${alt}">
+    </div>`;
+}
 
-const toggleButton = document.querySelector("#toggleButton");
-const contentToHide = document.querySelector("#contentToHide");
+// Function to handle clicks on gallery images
+function viewHandler(event) {
+    const clickedElement = event.target;
 
-toggleButton.addEventListener("click", () => {
-    if (contentToHide.style.display === 'none') {
-        contentToHide.style.display = 'block';
-    } else {
-        contentToHide.style.display = 'none';
-    }
-});
+    if (clickedElement.tagName === 'IMG') {
+        const srcArray = clickedElement.src.split("-");
+        const newImageSrc = `${srcArray[0]}-full.jpeg`;
+        const altText = clickedElement.alt;
 
-// Function to check screen size and show/hide element
-function checkScreenSize() {
-    if (window.innerWidth > 768) { // Change 768 to the desired screen width breakpoint
-        contentToHide.style.display = 'block';
-    } else {
-        // Check if the navigation menu was previously hidden
-        // If it was hidden, keep it hidden; otherwise, show it
-        if (contentToHide.style.display !== 'none') {
-            contentToHide.style.display = 'none';
-        }
+        const htmlToInsert = viewerTemplate(newImageSrc, altText);
+        document.body.insertAdjacentHTML("afterbegin", htmlToInsert);
+
+        document.querySelector(".close-viewer").addEventListener("click", closeViewer);
     }
 }
 
-// Call the function on page load
-window.addEventListener('load', checkScreenSize);
+// Function to close the modal
+function closeViewer() {
+    const viewer = document.querySelector(".viewer");
+    if (viewer) {
+        viewer.remove();
+    }
+}
 
-// Call the function on window resize
-window.addEventListener('resize', checkScreenSize);
+// Event listener for the menu button
+const menuButton = document.querySelector(".menu-button");
+const hiddenContent = document.querySelector("#contentToHide");
 
 
+menuButton.addEventListener("click", () => {
+    if (hiddenContent.style.display === "none") {
+        hiddenContent.style.display = "block";
+    } else {
+        hiddenContent.style.display = "none";
+    }
+});
+
+// Function to handle resize event
+function handleResize() {
+    if (window.innerWidth > 768) {
+        contentToHide.style.display = "block";
+    } else {
+        if (contentToHide.style.display !== 'none') {
+            contentToHide.style.display = 'none';
+    }
+}
+}
+handleResize();
+window.addEventListener("resize", handleResize);
+// Event listener for the gallery images
+const gallery = document.querySelector('.gallery');
+gallery.addEventListener('click', viewHandler);
+
+// Initial call and event listener for window resize
 
 
