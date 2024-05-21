@@ -10,11 +10,11 @@ function viewerTemplate(pic, alt) {
 function viewHandler(event) {
     const clickedElement = event.target;
 
-    if (clickedElement.tagName === 'img') {
+    if (clickedElement.tagName === 'IMG') {
         const srcArray = clickedElement.src.split("-");
         const newImageSrc = `photos/${srcArray[0]}-full.jpeg`;
         const altText = clickedElement.alt;
-
+        console.log(srcArray);
         const htmlToInsert = viewerTemplate(newImageSrc, altText);
         document.body.insertAdjacentHTML("afterbegin", htmlToInsert);
 
@@ -34,7 +34,6 @@ function closeViewer() {
 const menuButton = document.querySelector(".menu-button");
 const hiddenContent = document.querySelector("#contentToHide");
 
-
 menuButton.addEventListener("click", () => {
     if (hiddenContent.style.display === "none") {
         hiddenContent.style.display = "block";
@@ -46,19 +45,20 @@ menuButton.addEventListener("click", () => {
 // Function to handle resize event
 function handleResize() {
     if (window.innerWidth > 768) {
-        contentToHide.style.display = "block";
+        hiddenContent.style.display = "block";
     } else {
-        if (contentToHide.style.display !== 'none') {
-            contentToHide.style.display = 'none';
+        if (hiddenContent.style.display !== 'none') {
+            hiddenContent.style.display = 'none';
+        }
     }
 }
-}
+
 handleResize();
 window.addEventListener("resize", handleResize);
+
 // Event listener for the gallery images
 const gallery = document.querySelector('.gallery');
 gallery.addEventListener('click', viewHandler);
 
-// Initial call and event listener for window resize
 
 
