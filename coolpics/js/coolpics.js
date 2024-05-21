@@ -16,6 +16,9 @@ function viewHandler(event) {
         const altText = clickedElement.alt;
         const htmlToInsert = viewerTemplate(newImageSrc, altText);
         document.body.insertHTML("afterbegin", htmlToInsert);
+        const newElement = document.createElement('div');
+        newElement.innerHTML = htmlToInsert;
+        document.body.prepend(newElement)
 
         document.querySelector(".close-viewer").addEventListener("click", closeViewer);
     }
