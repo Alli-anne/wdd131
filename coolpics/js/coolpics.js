@@ -12,11 +12,11 @@ function viewHandler(event) {
 
     if (clickedElement.tagName === 'IMG') {
         const srcArray = clickedElement.src.split("-");
-        const newImageSrc = `photos/${srcArray[0]}-full.jpeg`;
+        const newImageSrc = `${srcArray[0]}-full.jpeg`;
         const altText = clickedElement.alt;
         console.log(srcArray);
         const htmlToInsert = viewerTemplate(newImageSrc, altText);
-        document.body.insertAdjacentHTML("afterbegin", htmlToInsert);
+        document.body.insertAdjacentHTML("afterBegin", htmlToInsert);
 
         document.querySelector(".close-viewer").addEventListener("click", closeViewer);
     }
