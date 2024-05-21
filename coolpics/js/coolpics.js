@@ -12,14 +12,11 @@ function viewHandler(event) {
 
     if (clickedElement.tagName === 'IMG') {
         const srcArray = clickedElement.src.split("-");
-        const newImageSrc = `photos/${srcArray[0]}-full.jpeg`;
+        const newImageSrc =`${srcArray[1]}-full.jpeg`;
         const altText = clickedElement.alt;
         console.log(srcArray);
         const htmlToInsert = viewerTemplate(newImageSrc, altText);
-
-        const newElement = document.createElement('div');
-        newElement.innerHTML = htmlToInsert;
-        document.body.prepend(newElement);
+        document.body.insertHTML("afterbegin", htmlToInsert);
 
         document.querySelector(".close-viewer").addEventListener("click", closeViewer);
     }
@@ -62,7 +59,6 @@ window.addEventListener("resize", handleResize);
 // Event listener for the gallery images
 const gallery = document.querySelector('.gallery');
 gallery.addEventListener('click', viewHandler);
-
 
 
 
