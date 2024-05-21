@@ -12,7 +12,7 @@ function viewHandler(event) {
 
     if (clickedElement.tagName === 'IMG') {
         const srcArray = clickedElement.src.split("-");
-        const newImageSrc = `${srcArray[0]}-full.jpeg`;
+        const newImageSrc = `photos/${srcArray[0]}-full.jpeg`;
         const altText = clickedElement.alt;
 
         const htmlToInsert = viewerTemplate(newImageSrc, altText);
