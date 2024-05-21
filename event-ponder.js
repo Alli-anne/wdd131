@@ -13,17 +13,19 @@ function newTask() {
   // render out the list
 }
 
-function removeTask(taskElement) {
-  // Note the use of Array.filter to remove the element from our task array
-  // Notice also how we are using taskElement instead of document as our starting point?
-  // This will restrict our search to the element instead of searching the whole document.
-  tasks = tasks.filter(
-    (task) => task.detail != taskElement.querySelector('p').innerText
-  );
-
-  // this line removes the HTML element from the DOM
-  taskElement.remove();
-}
+<<<<<<<<<<<<<<  ✨ Codeium Command 🌟 >>>>>>>>>>>>>>>>
++/**
++ * Remove a task from the tasks array and the DOM.
++ * @param {HTMLElement} taskElement - The task element to remove.
++ */
+ function removeTask(taskElement) {
++  // Use Array.filter to remove the task element from the tasks array.
++  // Only keep tasks where the task detail is not equal to the task element's text.
+-  // Note the use of Array.filter to remove the element from our task array
+-  // Notice also how we are using taskElement instead of document as our starting point?
+-  // This will restrict our search to the element instead of searching the whole document.
+   tasks = tasks.filter(
+<<<<<<<  c1a86180-f54d-4273-af5e-60fea40b0209  >>>>>>>
 
 function completeTask(taskElement) {
   // In this case we need to find the index of the task so we can modify it.

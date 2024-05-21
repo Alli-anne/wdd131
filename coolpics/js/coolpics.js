@@ -12,18 +12,11 @@ function viewHandler(event) {
 
     if (clickedElement.tagName === 'IMG') {
         const srcArray = clickedElement.src.split("-");
-        // Correctly construct the new image src
-        const newImageSrc = `${srcArray[0]}-full.jpeg`;
+        const newImageSrc = `${srcArray[1]}-full.jpeg`;
         const altText = clickedElement.alt;
-        console.log(srcArray);
         const htmlToInsert = viewerTemplate(newImageSrc, altText);
+        document.body.insertHTML("afterbegin", htmlToInsert);
 
-        // Insert the HTML to display the full-size image
-        const newElement = document.createElement('div');
-        newElement.innerHTML = htmlToInsert;
-        document.body.prepend(newElement);
-
-        // Add the event listener for the close button
         document.querySelector(".close-viewer").addEventListener("click", closeViewer);
     }
 }
