@@ -10,7 +10,7 @@ function viewerTemplate(pic, alt) {
 function viewHandler(event) {
     const clickedElement = event.target;
 
-    if (clickedElement.tagName === 'IMG') {
+    if (clickedElement.tagName === 'img') {
         const srcArray = clickedElement.src.split("-");
         const newImageSrc = `photos/${srcArray[0]}-full.jpeg`;
         const altText = clickedElement.alt;
