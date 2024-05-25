@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* General body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Anton', sans-serif; /* Applying the Anton font throughout the body */
+    background-color: white;
+}
+
+/* Header styles */
+#title {
+    text-align: center;
+    font-size: 60px; /* Large font size for the header title */
+    color: #8B786D /* Increased contrast for the title */
+}
+
+nav {
+    text-align: right;
+    font-size: 20px;
+    background-color: #BFA89E; /* Background color for the navigation bar */
+    border: 1px solid #BFA89E; /* Border around the navigation bar */
+    padding: 10px;
+    padding-right: 70px;
+    color: #FFFFFF; /* White text for better contrast */
+}
+
+/* Navigation list styles */
+li {
+    display: inline; /* Display list items in a row */
+    margin-right: 20px; /* Right margin for spacing between menu items */
+    list-style: none; /* Remove default list styling */
+}
+
+/* Navigation link styles */
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: #FFFFFF; /* White text color for links for better contrast */
+}
+
+/* Main layout styles */
+main {
+    display: grid;
+    grid-template-columns: 1fr .25fr; /* Two-column layout with the right column narrower */
+    gap: 20px; /* Space between columns */
+    padding: 10px; /* Padding around the main content */
+    margin: 50px;
+    margin-top: 0px;
+}
+
+/* Styles for the filters container */
+#column-3 {
+    text-align: center; /* Center-align text inside the filter container */
+    border: 1px solid black; /* Black border around the filter container */
+    padding: 10px; /* Padding inside the filter container */
+    min-width: 200px; /* Ensuring minimum width */
+    margin-right: 50px;
+    background-color: #283044; /* Background color */
+    color: #FFFFFF; /* White text color for better contrast */
+}
+
+/* Styles for articles */
+.article-entry {
+    display: grid; /* Using grid to lay out article entries */
+    grid-template-columns: .35fr 1fr; /* Two columns of different widths */
+    gap: 20px; /* Space between elements within an article */
+    padding: 0; /* No padding inside each article entry */
+}
+
+/* Article meta and content styles */
+.article-meta {
+    flex: 1; /* Allow each section to take up equal space */
+    text-align: right; /* Right-align text */
+    border-right: 1px solid black; /* Only a right border */
+    padding-left: 0;
+    padding-right: 20px;
+    color: #283044; /* Text color */
+}
+
+.article-content {
+    flex: 1; /* Allow each section to take up equal space */
+    text-align: center; /* Center-align text */
+    padding-left: 100px; /* Move the content to the right */
+}
+
+#book-title, #description {
+    text-align: left;
+    color: #283044; /* Text color */
+}
+
+#description {
+    color: #78A1BB; /* Different text color */
+}
+
+/* Additional styles for vertical lines or other components */
+.vertical-line {
+    height: 500px; /* Height of the vertical line */
+    width: 1px; /* Thin vertical line */
+    background-color: black; /* Color for the vertical line */
+    margin: 10px 20px; /* Margins to space out the vertical line */
+}
+
+#date, #genre {
+    font-size: 17px; /* Font size for date and genre */
+}
+
+/* Skip to main content link styles */
+.skiptocontent a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #283044; /* Background color for the skip link */
+    color: #EBF5EE; /* Text color for the skip link */
+    padding: 8px;
+    text-decoration: none; /* Remove underline from the link */
+    z-index: 1000;
+}
+
+.skiptocontent a:focus {
+    top: 0;
+}
+
