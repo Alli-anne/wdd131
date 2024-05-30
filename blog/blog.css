@@ -57,6 +57,8 @@ main {
     margin-right: 50px;
     background-color: #283044; /* Background color */
     color: #FFFFFF; /* White text color for better contrast */
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* Styles for articles */
@@ -71,7 +73,8 @@ main {
 .article-meta {
     flex: 1; /* Allow each section to take up equal space */
     text-align: right; /* Right-align text */
-    border-right: 1px solid black; /* Only a right border */
+    border-right: 1px solid black; /*Only a right border */
+    
     padding-left: 0;
     padding-right: 20px;
     color: #283044; /* Text color */
@@ -97,7 +100,7 @@ main {
     height: 500px; /* Height of the vertical line */
     width: 1px; /* Thin vertical line */
     background-color: black; /* Color for the vertical line */
-    margin: 10px 20px; /* Margins to space out the vertical line */
+     /* Margins to space out the vertical line */
 }
 
 #date, #genre {
