@@ -8,18 +8,16 @@ function viewerTemplate(pic, alt) {
 // Function to handle clicks on gallery images
 function viewHandler(event) {
     const clickedElement = event.target;
+    const srcArray = clickedElement.src.split("-");
+    const newImageSrc = srcArray[0] + "-full.jpeg";
+    const altText = clickedElement.alt;
 
-    if (clickedElement.tagName === 'IMG') {
-        const srcArray = clickedElement.src.split("-");
-        const newImageSrc = srcArray[0] + "-full.jpeg";
-        const altText = clickedElement.alt;
+    const htmlToInsert = viewerTemplate(newImageSrc, altText);
+    document.body.insertAdjacentHTML("afterbegin", htmlToInsert);
 
-        const htmlToInsert = viewerTemplate(newImageSrc, altText);
-        document.body.insertAdjacentHTML("afterbegin", htmlToInsert);
-
-        document.querySelector(".close-viewer").addEventListener("click", closeViewer);
-    }
+    document.querySelector(".close-viewer").addEventListener("click", closeViewer);
 }
+
 
 // Function to close the modal
 function closeViewer() {
