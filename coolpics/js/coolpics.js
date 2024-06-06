@@ -1,4 +1,3 @@
-// Function to generate the modal template
 function viewerTemplate(pic, alt) {
     return `<div class="viewer">
         <button class="close-viewer">X</button>
@@ -12,13 +11,11 @@ function viewHandler(event) {
 
     if (clickedElement.tagName === 'IMG') {
         const srcArray = clickedElement.src.split("-");
-        const newImageSrc = `${srcArray[0]}-full.jpeg`;
+        const newImageSrc = srcArray[0] + "-full.jpeg";
         const altText = clickedElement.alt;
+
         const htmlToInsert = viewerTemplate(newImageSrc, altText);
-        document.body.insertHTML("afterbegin", htmlToInsert);
-        const newElement = document.createElement('div');
-        newElement.innerHTML = htmlToInsert;
-        document.body.prepend(newElement)
+        document.body.insertAdjacentHTML("afterbegin", htmlToInsert);
 
         document.querySelector(".close-viewer").addEventListener("click", closeViewer);
     }
@@ -36,6 +33,7 @@ function closeViewer() {
 const menuButton = document.querySelector(".menu-button");
 const hiddenContent = document.querySelector("#contentToHide");
 
+
 menuButton.addEventListener("click", () => {
     if (hiddenContent.style.display === "none") {
         hiddenContent.style.display = "block";
@@ -46,21 +44,21 @@ menuButton.addEventListener("click", () => {
 
 // Function to handle resize event
 function handleResize() {
-    if (window.innerWidth > 768) {
-        hiddenContent.style.display = "block";
+    if (window.innerWidth > 700) {
+        contentToHide.style.display = "block";
     } else {
-        if (hiddenContent.style.display !== 'none') {
-            hiddenContent.style.display = 'none';
-        }
+        if (contentToHide.style.display !== 'none') {
+            contentToHide.style.display = 'none';
     }
 }
-
+}
 handleResize();
 window.addEventListener("resize", handleResize);
-
 // Event listener for the gallery images
 const gallery = document.querySelector('.gallery');
 gallery.addEventListener('click', viewHandler);
+
+// Initial call and event listener for window resize
 
 
 
