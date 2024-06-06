@@ -8,7 +8,7 @@ function viewerTemplate(pic, alt) {
 // Function to handle clicks on gallery images
 function viewHandler(event) {
     const clickedElement = event.target;
-    const srcArray = clickedElement.img.split("-");
+    const srcArray = clickedElement.src.split("-");
     const newImageSrc = srcArray[1] + "-full.jpeg";
     const altText = clickedElement.alt;
     const htmlToInsert = viewerTemplate(newImageSrc, altText);
