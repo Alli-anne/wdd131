@@ -8,8 +8,13 @@ function viewerTemplate(pic, alt) {
 // Function to handle clicks on gallery images
 function viewHandler(event) {
     const clickedElement = event.target;
-    const srcArray = clickedElement.src.split("-");
-    const newImageSrc = srcArray[1] + "-full.jpeg";
+
+    //TEMP:
+    console.log(event.target.src.replace("-sm.jpeg", "-full.jpeg"));
+
+    //const srcArray = clickedElement.src.split("-");
+    //const newImageSrc = srcArray[1] + "-full.jpeg";
+    const newImageSrc = event.target.src.replace("-sm.jpeg", "-full.jpeg")
     const altText = clickedElement.alt;
     const htmlToInsert = viewerTemplate(newImageSrc, altText);
     document.body.insertAdjacentHTML("afterbegin", htmlToInsert);
