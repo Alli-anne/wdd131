@@ -140,18 +140,17 @@ footer img {
         display: flex;
         flex-direction: row;
     }
+    .recipe-overlay{
+        display: flex;
+        flex-direction: row;
+    }
    
     .recipe-img{
         max-width: 50%;
         flex-direction: row;
         margin-right: 10px;
     }
-    .recipe-button-container{
-        display: flex;
-        justify-content: center
-       
-
-    }
+    
     footer{
         display: flex;
         flex-direction: row;
