@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="styles/recipes.css">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Explore a variety of delicious recipes in our Recipe Book.">
+    <meta property="og:image" content="images/recipe-book.png">
+    <meta property="og:url" content="https://yourwebsiteurl.com">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Recipe Book">
+    <meta name="twitter:description" content="Explore a variety of delicious recipes in our Recipe Book.">
+    <meta name="twitter:image" content="images/recipe-book.png">
+    <meta name="twitter:url" content="https://yourwebsiteurl.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <img id="title-img" src="images/recipe-book.png" alt="Recipe book cover">
+            <h1>Recipe Book</h1>
+        </div>
+        <div class="search-content">
+            <input id="search" type="text" placeholder="Search" aria-label="Search recipes">
+            <button id="search-btn" aria-label="Search">
+                <img id="search-img" src="images/search.svg" alt="Search icon">
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="recipes">
+            <div class="recipe">
+                <div class="recipe-img-container">
+                    <img class="recipe-img" src="images/chicken-curry.webp" alt="Chicken curry">
+                    <div class="recipe-btn-container">
+                        <button class="recipe-btn">Chicken</button>
+                        <button class="recipe-btn">Entree</button>
+                        <button class="recipe-btn">Indian</button>
+                    </div>
+                </div>
+                <h2>Chicken Curry</h2>
+                <div class="stars">
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                </div>
+                <p class="hide">Quick and easy Chicken curry recipe made with easy to find ingredients.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="https://www.flaticon.com/free-icons/recipe" title="Recipe icons">Recipe icons created by Freepik - Flaticon</a>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
+            <a href="https://instagram.com" aria-label="Instagram"><img src="images/instagram_icon.svg" alt="Instagram icon"></a>
+            <a href="https://youtube.com" aria-label="YouTube"><img src="images/youtube_icon.svg" alt="YouTube icon"></a>
+            <a href="https://pinterest.com" aria-label="Pinterest"><img src="images/pinterest_icon.svg" alt="Pinterest icon"></a>
+        </div>        
+    </footer>
+    <script src="recipes.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --primary-color: purple;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: "Amatic SC";
+    }
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    border-bottom: #333 solid 1px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    display:flexbox;
+    
+
+}
+input{
+    width: 80%;
+    margin-bottom: 25px;
+    margin-left: 5%;
+    
+    
+}
+#search-btn{
+    max-width: 10%;
+    max-height: 20px;
+    margin-top: 10px;
+    margin-right: 5%;
+}
+#search-img{
+    
+    width: 10px ;
+}
+.search-content{
+   margin-left: auto;
+   margin-right: auto;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.recipe-btn{
+    margin: 0px;
+    font-family: var(--primary-font);
+    font-size: 15px;
+    color: var(--text-light);
+    background-color: var(--text-dark);
+    padding: 5px;
+
+}
+main{
+    border: #333 solid 1px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5%;
+}
+#title-img{
+    margin-top: 10px;
+    grid-column: 1/2;
+    max-width: 10%;
+    align-self: center;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: var(--text-dark);
+    text-align: center;
+
+    grid-column: 2/4;
+    padding-left: 10px;
+}
+.recipe-img{
+    max-width: 100%;
+}
+/* styles/recipes.css */
+
+h2 {
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 5px; /* Adjust this value to move stars closer */
+}
+
+.stars {
+    margin-top: 0; /* Ensure no margin on top */
+    margin-bottom: 20px;
+}
+
+.stars span {
+    margin-right: 2px; /* Adjust space between stars if needed */
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    flex-direction: column; /* To ensure the link and social icons are stacked */
+}
+
+footer a {
+    margin-bottom: 5px; /* Adjust as needed for spacing between link and icons */
+    font-size: 1em;
+    color: var(--primary-color)
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social a {
+    margin: 0 10px; /* Adjust spacing between icons */
+}
+
+footer img {
+    width: 60px;
+}
+.hide{
+    display: none;
+}
+@media screen and (min-width: 600px) {
+    .hide{
+        display: inline;
+    }
+
+    #title-img{
+    
+        max-width: 10% ;
+    }
+    .recipes{
+        display: flex;
+        flex-direction: row;
+    }
+   
+    .recipe-img{
+        max-width: 50%;
+        flex-direction: row;
+        margin-right: 10px;
+    }
+    .recipe-button-container{
+        display: flex;
+        justify-content: center
+       
+
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+    }
+    .social{
+        justify-content: end;
+    }
+    footer a {
+        margin-right: 300px;
+    }
+
+    
+
+
+}
+
+@media (min-width: 960px) {
+ 
+    header{
+        border-bottom: #333 solid 1px;
+    }
+    main{
+        max-width: 960px;
+        margin: 0 auto;
+        margin-bottom: 50px
+    }
+
+}
+
