@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Keeper</title>
+    <link rel="stylesheet" href="styles/cart-keeper.css">
+</head>
+<body>
+    
+    <header>
+        <img class="logo" src="photos/cartkeeper.png" alt="Cart Keeper Logo">
+    
+        <h1 id="title">Cart Keeper</h1>
+        <nav>
+            <a href="#home">My List</a>
+            <a href="#about">About Us</a>
+        </nav>
+    
+    </header>
+    <main>
+
+        <div class="search">
+            <div class="search2">
+        <input  type="text"  id="searchbar" placeholder="Search">    
+        <button onclick="search()" id="searchbutton"><img src="photos/search.png" alt="Search"></button>
+        </div>
+        <div id="result" class="search_list"></div>
+
+        
+            
+    
+        </div>
+        <div class ="list">
+            <h2>Your List</h2>
+            <ul class="list_items">
+                <div class="full_item">
+                <button class="mark_as_done"></button>
+                <li>Item 1</li>
+                </div>
+                <div class="full_item">
+                    <button class="mark_as_done"></button>
+                    <li>Item 1</li>
+                </div>
+
+            </ul>
+        </div>
+        <div class="suggestions">
+            <h2 id="suggestions_title">Suggestions</h2>
+            <ul class="suggestions_list">
+            <div class="suggestion_item">
+                <li>Item 3</li>
+                <button class="add">Add</button>
+            </div>
+            <div class="suggestion_item">
+                <li>Item 3</li>
+                <button class="add">Add</button>
+            </div>
+            <div class="suggestion_item">
+                <li>Item 3</li>
+                <button class="add">Add</button>
+            </div>
+            </ul>
+            
+        </div>
+        <form class="form">
+            <button>Add</button>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="javascripts/food_list.js"></script>
+</body>
+</html>

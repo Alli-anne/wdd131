@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Quicksand:wght@300..700&display=swap');
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #3066BE;
+    --secondary-color: #DBB1BC;
+    --accent1-color: #A2D6F9;
+    --accent2-color: white;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: Antonio, sans-serif;
+    --paragraph-font: Quicksand, sans-serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --headline-color-on-white: var(--primary-color); /* headlines on a white background */
+    --headline-color-on-color: white; /* headlines on a colored background */
+    --paragraph-color-on-white: var(--primary-color); /* paragraph text on a white background */
+    --paragraph-color-on-color: white; /* paragraph text on a colored background */
+    --paragraph-background-color: var(--primary-color);
+    --nav-link-color: var(--primary-color);
+    --nav-background-color: var(--secondary-color);
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: var(--primary-color);
+}
+
+body {
+    font-family: var(--paragraph-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #A2D6F9;
+    text-align: center;
+    padding: 5px;
+    max-width: 100;
+}
+
+.logo {
+    width: 30%;
+    max-width: 10%;
+    margin-left: auto;
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+h1 {
+    grid-column: 1/3;
+    text-align: center;
+    grid-row: 1;
+    margin-bottom: 5px;
+    margin-top: 3px;
+    font-size: 40px;
+    color: var(--secondary-color);
+}
+
+nav {
+    grid-column: 1/3;
+    grid-row: 2;
+    text-align: center;
+    font-size: 1em;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-link-color);
+    background-color: var(--nav-background-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+body {
+    margin: 0;
+    padding-left: 0;
+}
+
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.search {
+    grid-column: 1/3;
+    width: 300px;
+    background-color: var(--secondary-color);
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+    
+}
+
+input {
+    grid: 1/3;
+}
+
+.search_list {
+    list-style: none;
+    flex-direction: column;
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.search_list button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.list {
+    grid-column: 1/3;
+}
+
+.add_button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--accent2-color);
+    border: 1px solid var(--primary-color);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#searchbar {
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    font-family: var(--paragraph-font);
+}
+
+.list_items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    text-align: right;
+}
+
+.full_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 1em;
+    grid-column: 1/3;
+    margin-top: 4px;
+}
+
+h2 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    grid-column: 1/3;
+}
+
+.mark_as_done {
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 1em;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.search2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    margin: 0;
+}
+
+#searchbutton {
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#searchbar img {
+    width: 30%;
+}
+
+.add {
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-family: var(--heading-font);
+}
+
+.hide {
+    display: none;
+}
+
+.suggestion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 4px;
+}
+
+.suggestions_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-top: 0px;
+}
+
+.suggestion_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 1em;
+    grid-column: 1/3;
+    margin-top: 4px;
+    list-style: none;
+}
+
+.form {
+    grid-column: 1/3;
+    text-align: right;
+}
+
+.suggestion_title {
+    grid-column: 1/3;
+    text-align: center;
+    font-size: 1em;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+/* Center the suggestions section */
+.suggestions {
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.suggestions_list {
+    width: 100%;
+}
+
+.suggestion_item {
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--accent2-color);
+    border: 1px solid var(--primary-color);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
